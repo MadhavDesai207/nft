@@ -1,0 +1,71 @@
+.wallet-connect-container {
+    margin: 20px 0;
+  }
+  
+  .connect-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 14px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .connect-button:hover {
+    background-color: #2980b9;
+  }
+  
+  .connect-button:disabled {
+    background-color: #95a5a6;
+    cursor: not-allowed;
+  }
+  
+  .wallet-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+  }
+  
+  .loading-spinner {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: white;
+    animation: spin 1s ease-in-out infinite;
+  }
+  
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .supported-wallets {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #7f8c8d;
+  }
+  
+  .wallet-logos {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 5px;
+  }
+  
+  .wallet-logos span {
+    font-size: 12px;
+    padding: 4px 8px;
+    background-color: #f7f9fc;
+    border-radius: 4px;
+    color: #34495e;
+  }
