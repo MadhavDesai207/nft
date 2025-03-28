@@ -1,0 +1,23 @@
+name: Deploy to Vercel
+
+on:
+  push:
+    branches:
+      - main  # Runs only when changes are pushed to the main branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest  # Runs on a Linux-based virtual machine
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3  # Clones your repo into the runner
+
+      - name: Install Dependencies
+        run: npm install  # Change to `yarn install` if using Yarn
+
+      - name: Build Project
+        run: npm run build  # Change based on your framework (e.g., `npm run build` for React)
+
+      - name: Deploy to Vercel
+        run: npx vercel --token=${{ secrets.VERCEL_TOKEN }} --prod
